@@ -19,7 +19,7 @@ pipeline {
             steps{
                 script{
                     git creadentialsId : 'saikumarreddy',
-                    url: 'https://github.com/saikumar2903/Demo/tree/main/EKS-CICD-master.git',
+                    url: 'https://github.com/saikumar2903/Demo.git',
                     branch: 'main'
                 }
             }
