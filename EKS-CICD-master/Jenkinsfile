@@ -18,7 +18,7 @@ pipeline {
         stage('Checkout SCM'){
             steps{
                 script{
-                    git creadentialsId : 'github_direct',
+                    git creadentialsId : 'saikumarreddy',
                     url: 'https://github.com/saikumar2903/Demo/tree/main/EKS-CICD-master.git',
                     branch: 'main'
                 }
