@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_USERNAME="bharathkumar192"
+        DOCKERHUB_USERNAME="saikumar2903"
         APP_NAME="django-arco-app"
         IMAGE_TAG="${BUILD_NUMBER}"
         IMAGE_NAME="${DOCKERHUB_USERNAME}"+"/"+"${APP_NAME}"
@@ -19,8 +19,8 @@ pipeline {
             steps{
                 script{
                     git creadentialsId : 'github_direct',
-                    url: 'https://github.com/bharathkumar192/EKS-CICD.git',
-                    branch: 'master'
+                    url: 'https://github.com/saikumar2903/Demo/tree/main/EKS-CICD-master.git',
+                    branch: 'main'
                 }
             }
         }
@@ -67,11 +67,11 @@ pipeline {
         steps {
             sshagent(credentials: ['githubUser']) { // Assuming 'githubUser' is the ID of your SSH credential 
                 sh """
-                    git config --global user.name "bharathkumar192"
-                    git config --global user.email "bharathkumar1922001@gmail.com"
+                    git config --global user.name "saikumar2903"
+                    git config --global user.email "sreddymalla29@gmail.com"
                     git add deployment.yml
                     git commit -m "Update deployment file"
-                    git push git@github.com:bharathkumar192/EKS-CICD.git master 
+                    git push git@github.com:saikumar2903/Demo/edit/main/EKS-CICD-master.git main
                 """
              }
          }
